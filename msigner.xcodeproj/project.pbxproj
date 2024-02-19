@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28389C9C2B83D26B00B38005 /* archo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C872B83D26A00B38005 /* archo.cpp */; };
+		28389C9D2B83D26B00B38005 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C892B83D26A00B38005 /* common.cpp */; };
+		28389C9E2B83D26B00B38005 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C8B2B83D26A00B38005 /* base64.cpp */; };
+		28389C9F2B83D26B00B38005 /* json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C8F2B83D26A00B38005 /* json.cpp */; };
+		28389CA02B83D26B00B38005 /* zsign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C912B83D26A00B38005 /* zsign.cpp */; };
+		28389CA12B83D26B00B38005 /* openssl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C932B83D26A00B38005 /* openssl.cpp */; };
+		28389CA22B83D26B00B38005 /* signing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C942B83D26A00B38005 /* signing.cpp */; };
+		28389CA32B83D26B00B38005 /* macho.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C952B83D26A00B38005 /* macho.cpp */; };
+		28389CA42B83D26B00B38005 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 28389C962B83D26A00B38005 /* README.md */; };
+		28389CA52B83D26B00B38005 /* bundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28389C982B83D26A00B38005 /* bundle.cpp */; };
+		28389CA72B83D26B00B38005 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 28389C9B2B83D26B00B38005 /* LICENSE */; };
+		287984FB2B825EF400D6071A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287984FA2B825EF400D6071A /* DetailView.swift */; };
+		287984FD2B8260F500D6071A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287984FC2B8260F500D6071A /* SettingsView.swift */; };
+		287985012B8264FF00D6071A /* FilePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287985002B8264FF00D6071A /* FilePickerController.swift */; };
+		287985032B826A2E00D6071A /* AppSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287985022B826A2E00D6071A /* AppSigner.swift */; };
 		2879CF082B82412C00DC737E /* msignerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF072B82412C00DC737E /* msignerApp.swift */; };
 		2879CF0A2B82412C00DC737E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF092B82412C00DC737E /* ContentView.swift */; };
 		2879CF0C2B82412C00DC737E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF0B2B82412C00DC737E /* Item.swift */; };
@@ -35,6 +50,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28389C852B83D26A00B38005 /* msigner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "msigner-Bridging-Header.h"; sourceTree = "<group>"; };
+		28389C862B83D26A00B38005 /* macho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macho.h; sourceTree = "<group>"; };
+		28389C872B83D26A00B38005 /* archo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = archo.cpp; sourceTree = "<group>"; };
+		28389C892B83D26A00B38005 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
+		28389C8A2B83D26A00B38005 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		28389C8B2B83D26A00B38005 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
+		28389C8C2B83D26A00B38005 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		28389C8D2B83D26A00B38005 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		28389C8E2B83D26A00B38005 /* mach-o.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mach-o.h"; sourceTree = "<group>"; };
+		28389C8F2B83D26A00B38005 /* json.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json.cpp; sourceTree = "<group>"; };
+		28389C902B83D26A00B38005 /* signing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signing.h; sourceTree = "<group>"; };
+		28389C912B83D26A00B38005 /* zsign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zsign.cpp; sourceTree = "<group>"; };
+		28389C922B83D26A00B38005 /* archo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = archo.h; sourceTree = "<group>"; };
+		28389C932B83D26A00B38005 /* openssl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = openssl.cpp; sourceTree = "<group>"; };
+		28389C942B83D26A00B38005 /* signing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = signing.cpp; sourceTree = "<group>"; };
+		28389C952B83D26A00B38005 /* macho.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = macho.cpp; sourceTree = "<group>"; };
+		28389C962B83D26A00B38005 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		28389C972B83D26A00B38005 /* bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bundle.h; sourceTree = "<group>"; };
+		28389C982B83D26A00B38005 /* bundle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bundle.cpp; sourceTree = "<group>"; };
+		28389C992B83D26A00B38005 /* openssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openssl.h; sourceTree = "<group>"; };
+		28389C9B2B83D26B00B38005 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		287984FA2B825EF400D6071A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		287984FC2B8260F500D6071A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		287985002B8264FF00D6071A /* FilePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerController.swift; sourceTree = "<group>"; };
+		287985022B826A2E00D6071A /* AppSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSigner.swift; sourceTree = "<group>"; };
 		2879CF042B82412C00DC737E /* msigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2879CF072B82412C00DC737E /* msignerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerApp.swift; sourceTree = "<group>"; };
 		2879CF092B82412C00DC737E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +113,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28389C842B83D21900B38005 /* zsign */ = {
+			isa = PBXGroup;
+			children = (
+				28389C872B83D26A00B38005 /* archo.cpp */,
+				28389C922B83D26A00B38005 /* archo.h */,
+				28389C982B83D26A00B38005 /* bundle.cpp */,
+				28389C972B83D26A00B38005 /* bundle.h */,
+				28389C882B83D26A00B38005 /* common */,
+				28389C9B2B83D26B00B38005 /* LICENSE */,
+				28389C952B83D26A00B38005 /* macho.cpp */,
+				28389C862B83D26A00B38005 /* macho.h */,
+				28389C932B83D26A00B38005 /* openssl.cpp */,
+				28389C992B83D26A00B38005 /* openssl.h */,
+				28389C962B83D26A00B38005 /* README.md */,
+				28389C942B83D26A00B38005 /* signing.cpp */,
+				28389C902B83D26A00B38005 /* signing.h */,
+				28389C912B83D26A00B38005 /* zsign.cpp */,
+				28389C852B83D26A00B38005 /* msigner-Bridging-Header.h */,
+			);
+			path = zsign;
+			sourceTree = "<group>";
+		};
+		28389C882B83D26A00B38005 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				28389C892B83D26A00B38005 /* common.cpp */,
+				28389C8A2B83D26A00B38005 /* base64.h */,
+				28389C8B2B83D26A00B38005 /* base64.cpp */,
+				28389C8C2B83D26A00B38005 /* common.h */,
+				28389C8D2B83D26A00B38005 /* json.h */,
+				28389C8E2B83D26A00B38005 /* mach-o.h */,
+				28389C8F2B83D26A00B38005 /* json.cpp */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		2879CEFB2B82412C00DC737E = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +174,11 @@
 			children = (
 				2879CF072B82412C00DC737E /* msignerApp.swift */,
 				2879CF092B82412C00DC737E /* ContentView.swift */,
+				287985022B826A2E00D6071A /* AppSigner.swift */,
+				287985002B8264FF00D6071A /* FilePickerController.swift */,
+				287984FA2B825EF400D6071A /* DetailView.swift */,
+				28389C842B83D21900B38005 /* zsign */,
+				287984FC2B8260F500D6071A /* SettingsView.swift */,
 				2879CF0B2B82412C00DC737E /* Item.swift */,
 				2879CF0D2B82412D00DC737E /* Assets.xcassets */,
 				2879CF0F2B82412D00DC737E /* Preview Content */,
@@ -198,6 +279,7 @@
 				TargetAttributes = {
 					2879CF032B82412C00DC737E = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					2879CF152B82412D00DC737E = {
 						CreatedOnToolsVersion = 15.0;
@@ -234,8 +316,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28389CA42B83D26B00B38005 /* README.md in Resources */,
 				2879CF112B82412D00DC737E /* Preview Assets.xcassets in Resources */,
 				2879CF0E2B82412D00DC737E /* Assets.xcassets in Resources */,
+				28389CA72B83D26B00B38005 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +344,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28389CA32B83D26B00B38005 /* macho.cpp in Sources */,
+				287984FD2B8260F500D6071A /* SettingsView.swift in Sources */,
+				28389CA02B83D26B00B38005 /* zsign.cpp in Sources */,
+				287985012B8264FF00D6071A /* FilePickerController.swift in Sources */,
 				2879CF0A2B82412C00DC737E /* ContentView.swift in Sources */,
+				28389CA52B83D26B00B38005 /* bundle.cpp in Sources */,
+				287984FB2B825EF400D6071A /* DetailView.swift in Sources */,
+				28389C9D2B83D26B00B38005 /* common.cpp in Sources */,
+				287985032B826A2E00D6071A /* AppSigner.swift in Sources */,
 				2879CF0C2B82412C00DC737E /* Item.swift in Sources */,
 				2879CF082B82412C00DC737E /* msignerApp.swift in Sources */,
+				28389CA12B83D26B00B38005 /* openssl.cpp in Sources */,
+				28389C9F2B83D26B00B38005 /* json.cpp in Sources */,
+				28389CA22B83D26B00B38005 /* signing.cpp in Sources */,
+				28389C9E2B83D26B00B38005 /* base64.cpp in Sources */,
+				28389C9C2B83D26B00B38005 /* archo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +520,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"msigner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/opt/openssl/lib,
+					/opt/homebrew/opt/openssl/include,
+				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,9 +540,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lcrypto";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miika.msigner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "msigner/zsign/msigner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,11 +556,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"msigner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/opt/openssl/lib,
+					/opt/homebrew/opt/openssl/include,
+				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,9 +576,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-lcrypto";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miika.msigner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "msigner/zsign/msigner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
