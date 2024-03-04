@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import Zip
 
-
 class Signer {
     private let unsigIPAPath: String?
     private var signedIPAPath: String?

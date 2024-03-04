@@ -77,6 +77,8 @@
 		28141C702B95339C004598E8 /* zsign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zsign.cpp; sourceTree = "<group>"; };
 		28141C812B95339C004598E8 /* signing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = signing.cpp; sourceTree = "<group>"; };
 		28141C852B95339C004598E8 /* archo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = archo.cpp; sourceTree = "<group>"; };
+		28141C972B9552F7004598E8 /* zsign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zsign.h; sourceTree = "<group>"; };
+		28141C9F2B955639004598E8 /* zsign-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zsign-Bridging-Header.h"; sourceTree = "<group>"; };
 		287984FA2B825EF400D6071A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		287984FC2B8260F500D6071A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		287985002B8264FF00D6071A /* FilePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,8 @@
 				28141C702B95339C004598E8 /* zsign.cpp */,
 				28141C812B95339C004598E8 /* signing.cpp */,
 				28141C852B95339C004598E8 /* archo.cpp */,
+				28141C972B9552F7004598E8 /* zsign.h */,
+				28141C9F2B955639004598E8 /* zsign-Bridging-Header.h */,
 			);
 			path = zsign;
 			sourceTree = "<group>";
@@ -563,7 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.miika.msigner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "zsign/zsign-Bridging-Header.h";
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -601,7 +605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.miika.msigner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "zsign/zsign-Bridging-Header.h";
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
