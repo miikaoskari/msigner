@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Zip
+
 
 class Signer {
     private let unsigIPAPath: String?
@@ -21,7 +23,6 @@ class Signer {
     }
     
     func signIPAFile() {
-        
         
     }
     
