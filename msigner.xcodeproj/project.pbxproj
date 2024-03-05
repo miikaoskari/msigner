@@ -24,7 +24,6 @@
 		28141C962B9533F4004598E8 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 28141C952B9533F4004598E8 /* Zip */; };
 		287984FB2B825EF400D6071A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287984FA2B825EF400D6071A /* DetailView.swift */; };
 		287984FD2B8260F500D6071A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287984FC2B8260F500D6071A /* SettingsView.swift */; };
-		287985012B8264FF00D6071A /* FilePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287985002B8264FF00D6071A /* FilePickerController.swift */; };
 		287985032B826A2E00D6071A /* AppSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287985022B826A2E00D6071A /* AppSigner.swift */; };
 		2879CF082B82412C00DC737E /* msignerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF072B82412C00DC737E /* msignerApp.swift */; };
 		2879CF0A2B82412C00DC737E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF092B82412C00DC737E /* ContentView.swift */; };
@@ -34,6 +33,8 @@
 		2879CF1B2B82412D00DC737E /* msignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF1A2B82412D00DC737E /* msignerTests.swift */; };
 		2879CF252B82412D00DC737E /* msignerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF242B82412D00DC737E /* msignerUITests.swift */; };
 		2879CF272B82412D00DC737E /* msignerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF262B82412D00DC737E /* msignerUITestsLaunchTests.swift */; };
+		28974F422B9646050085AE67 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28974F412B9646050085AE67 /* DocumentPicker.swift */; };
+		28974F442B9646100085AE67 /* DocumentPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28974F432B9646100085AE67 /* DocumentPickerCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,11 +78,9 @@
 		28141C702B95339C004598E8 /* zsign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = zsign.cpp; sourceTree = "<group>"; };
 		28141C812B95339C004598E8 /* signing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = signing.cpp; sourceTree = "<group>"; };
 		28141C852B95339C004598E8 /* archo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = archo.cpp; sourceTree = "<group>"; };
-		28141C972B9552F7004598E8 /* zsign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zsign.h; sourceTree = "<group>"; };
 		28141C9F2B955639004598E8 /* zsign-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zsign-Bridging-Header.h"; sourceTree = "<group>"; };
 		287984FA2B825EF400D6071A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		287984FC2B8260F500D6071A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		287985002B8264FF00D6071A /* FilePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerController.swift; sourceTree = "<group>"; };
 		287985022B826A2E00D6071A /* AppSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSigner.swift; sourceTree = "<group>"; };
 		2879CF042B82412C00DC737E /* msigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2879CF072B82412C00DC737E /* msignerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerApp.swift; sourceTree = "<group>"; };
@@ -94,6 +93,8 @@
 		2879CF202B82412D00DC737E /* msignerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msignerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2879CF242B82412D00DC737E /* msignerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerUITests.swift; sourceTree = "<group>"; };
 		2879CF262B82412D00DC737E /* msignerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28974F412B9646050085AE67 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		28974F432B9646100085AE67 /* DocumentPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +143,6 @@
 				28141C702B95339C004598E8 /* zsign.cpp */,
 				28141C812B95339C004598E8 /* signing.cpp */,
 				28141C852B95339C004598E8 /* archo.cpp */,
-				28141C972B9552F7004598E8 /* zsign.h */,
 				28141C9F2B955639004598E8 /* zsign-Bridging-Header.h */,
 			);
 			path = zsign;
@@ -188,9 +188,10 @@
 			children = (
 				2879CF072B82412C00DC737E /* msignerApp.swift */,
 				2879CF092B82412C00DC737E /* ContentView.swift */,
+				28974F412B9646050085AE67 /* DocumentPicker.swift */,
 				287985022B826A2E00D6071A /* AppSigner.swift */,
-				287985002B8264FF00D6071A /* FilePickerController.swift */,
 				287984FA2B825EF400D6071A /* DetailView.swift */,
+				28974F432B9646100085AE67 /* DocumentPickerCoordinator.swift */,
 				287984FC2B8260F500D6071A /* SettingsView.swift */,
 				2879CF0B2B82412C00DC737E /* Item.swift */,
 				2879CF0D2B82412D00DC737E /* Assets.xcassets */,
@@ -370,15 +371,16 @@
 				28141C8F2B95339C004598E8 /* bundle.cpp in Sources */,
 				287984FD2B8260F500D6071A /* SettingsView.swift in Sources */,
 				28141C902B95339C004598E8 /* macho.cpp in Sources */,
-				287985012B8264FF00D6071A /* FilePickerController.swift in Sources */,
 				2879CF0A2B82412C00DC737E /* ContentView.swift in Sources */,
 				28141C8A2B95339C004598E8 /* common.cpp in Sources */,
+				28974F442B9646100085AE67 /* DocumentPickerCoordinator.swift in Sources */,
 				28141C932B95339C004598E8 /* archo.cpp in Sources */,
 				287984FB2B825EF400D6071A /* DetailView.swift in Sources */,
 				287985032B826A2E00D6071A /* AppSigner.swift in Sources */,
 				28141C912B95339C004598E8 /* zsign.cpp in Sources */,
 				2879CF0C2B82412C00DC737E /* Item.swift in Sources */,
 				28141C8C2B95339C004598E8 /* json.cpp in Sources */,
+				28974F422B9646050085AE67 /* DocumentPicker.swift in Sources */,
 				28141C922B95339C004598E8 /* signing.cpp in Sources */,
 				28141C8B2B95339C004598E8 /* base64.cpp in Sources */,
 				2879CF082B82412C00DC737E /* msignerApp.swift in Sources */,
@@ -470,13 +472,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -527,12 +530,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
