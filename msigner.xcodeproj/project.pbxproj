@@ -33,8 +33,6 @@
 		2879CF1B2B82412D00DC737E /* msignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF1A2B82412D00DC737E /* msignerTests.swift */; };
 		2879CF252B82412D00DC737E /* msignerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF242B82412D00DC737E /* msignerUITests.swift */; };
 		2879CF272B82412D00DC737E /* msignerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF262B82412D00DC737E /* msignerUITestsLaunchTests.swift */; };
-		28974F422B9646050085AE67 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28974F412B9646050085AE67 /* DocumentPicker.swift */; };
-		28974F442B9646100085AE67 /* DocumentPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28974F432B9646100085AE67 /* DocumentPickerCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +91,6 @@
 		2879CF202B82412D00DC737E /* msignerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msignerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2879CF242B82412D00DC737E /* msignerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerUITests.swift; sourceTree = "<group>"; };
 		2879CF262B82412D00DC737E /* msignerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		28974F412B9646050085AE67 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
-		28974F432B9646100085AE67 /* DocumentPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,10 +184,8 @@
 			children = (
 				2879CF072B82412C00DC737E /* msignerApp.swift */,
 				2879CF092B82412C00DC737E /* ContentView.swift */,
-				28974F412B9646050085AE67 /* DocumentPicker.swift */,
 				287985022B826A2E00D6071A /* AppSigner.swift */,
 				287984FA2B825EF400D6071A /* DetailView.swift */,
-				28974F432B9646100085AE67 /* DocumentPickerCoordinator.swift */,
 				287984FC2B8260F500D6071A /* SettingsView.swift */,
 				2879CF0B2B82412C00DC737E /* Item.swift */,
 				2879CF0D2B82412D00DC737E /* Assets.xcassets */,
@@ -373,14 +367,12 @@
 				28141C902B95339C004598E8 /* macho.cpp in Sources */,
 				2879CF0A2B82412C00DC737E /* ContentView.swift in Sources */,
 				28141C8A2B95339C004598E8 /* common.cpp in Sources */,
-				28974F442B9646100085AE67 /* DocumentPickerCoordinator.swift in Sources */,
 				28141C932B95339C004598E8 /* archo.cpp in Sources */,
 				287984FB2B825EF400D6071A /* DetailView.swift in Sources */,
 				287985032B826A2E00D6071A /* AppSigner.swift in Sources */,
 				28141C912B95339C004598E8 /* zsign.cpp in Sources */,
 				2879CF0C2B82412C00DC737E /* Item.swift in Sources */,
 				28141C8C2B95339C004598E8 /* json.cpp in Sources */,
-				28974F422B9646050085AE67 /* DocumentPicker.swift in Sources */,
 				28141C922B95339C004598E8 /* signing.cpp in Sources */,
 				28141C8B2B95339C004598E8 /* base64.cpp in Sources */,
 				2879CF082B82412C00DC737E /* msignerApp.swift in Sources */,
