@@ -9,10 +9,16 @@ import SwiftUI
 
 class ProvisioningConfig: ObservableObject {
     @Published var selectedFiles: [URL] = UserDefaults.standard.array(forKey: "selectedFiles") as? [URL] ?? []
-    @Published var password: String = KeychainService.loadPassword() {
-        didSet {
-            KeychainService.savePassword(password)
-        }
+    @Published var password: String = KeychainService.loadPassword()
+    
+    func saveSelectedFiles(_ files: [URL]) {
+        selectedFiles = files
+        UserDefaults.standard.set(files, forKey: "selectedFiles")
+    }
+    
+    func savePassword(_ password: String) {
+        self.password = password
+        KeychainService.savePassword(password)
     }
 }
 
@@ -56,9 +62,9 @@ struct SettingsView: View {
                     })
                     HStack {
                         Image(systemName: "lock")
-                        SecureField("Signature Password", text: $password)
-                            .onChange(of: password) { newValue in
-                                provisioningConfig.password = newValue
+                        SecureField("Signature Password", text: $provisioningConfig.password)
+                            .onChange(of: provisioningConfig.password) { newValue in
+                                provisioningConfig.savePassword(newValue)
                             }
                     }
                 }
