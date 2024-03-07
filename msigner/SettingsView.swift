@@ -7,11 +7,21 @@
 
 import SwiftUI
 
+class ProvisioningConfig: ObservableObject {
+    @Published var selectedFiles: [URL] = UserDefaults.standard.array(forKey: "selectedFiles") as? [URL] ?? []
+    @Published var password: String = KeychainService.loadPassword() {
+        didSet {
+            KeychainService.savePassword(password)
+        }
+    }
+}
+
 struct SettingsView: View {
     @State var isDarkModeEnabled: Bool = true
     @State var downloadViaWifiEnabled: Bool = false
-    @State private var password: String = ""
     @State var isImporting: Bool = false
+    @EnvironmentObject private var provisioningConfig: ProvisioningConfig
+    @State private var password: String = ""
     
     var body: some View {
         NavigationView {
@@ -19,7 +29,7 @@ struct SettingsView: View {
                 Section(header: Text("General")) {
                     HStack {
                         Image(systemName: "globe")
-                        Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Language")) {
+                        Picker(selection: .constant(1), label: Text("Language")) {
                             Text("English").tag(1)
                             Text("Finnish").tag(2)
                         }
@@ -47,6 +57,9 @@ struct SettingsView: View {
                     HStack {
                         Image(systemName: "lock")
                         SecureField("Signature Password", text: $password)
+                            .onChange(of: password) { newValue in
+                                provisioningConfig.password = newValue
+                            }
                     }
                 }
                 
@@ -54,21 +67,13 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .fileImporter(
                 isPresented: $isImporting,
-                allowedContentTypes: [.pdf],
+                allowedContentTypes: [.zip],
                 allowsMultipleSelection: true
             ) { result in
                 switch result {
                 case .success(let files):
-                    files.forEach { file in
-                        // gain access to the directory
-                        let gotAccess = file.startAccessingSecurityScopedResource()
-                        if !gotAccess { return }
-                        // access the directory URL
-                        // (read templates in the directory, make a bookmark, etc.)
-                        
-                        // release access
-                        file.stopAccessingSecurityScopedResource()
-                    }
+                    provisioningConfig.selectedFiles = files // Save selected file URLs
+                    UserDefaults.standard.set(provisioningConfig.selectedFiles, forKey: "selectedFiles") // Save to UserDefaults
                 case .failure(let error):
                     // handle error
                     print(error)
@@ -80,4 +85,44 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+}
+
+struct KeychainService {
+    static let service = "msigner"
+    
+    static func savePassword(_ password: String) {
+        guard let data = password.data(using: .utf8) else { return }
+        
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecAttrAccount as String: "password",
+            kSecValueData as String: data
+        ]
+        
+        SecItemDelete(query as CFDictionary)
+        SecItemAdd(query as CFDictionary, nil)
+    }
+    
+    static func loadPassword() -> String {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecAttrAccount as String: "password",
+            kSecMatchLimit as String: kSecMatchLimitOne,
+            kSecReturnData as String: true
+        ]
+        
+        var result: AnyObject?
+        let status = SecItemCopyMatching(query as CFDictionary, &result)
+        
+        if status == errSecSuccess {
+            if let data = result as? Data,
+               let password = String(data: data, encoding: .utf8) {
+                return password
+            }
+        }
+        
+        return ""
+    }
 }

@@ -36,24 +36,18 @@ struct AppsView: View {
         }
         .fileImporter(
             isPresented: $isImporting,
-            allowedContentTypes: [.pdf],
-            allowsMultipleSelection: true
+            allowedContentTypes: [.zip],
+            allowsMultipleSelection: false
         ) { result in
             switch result {
-            case .success(let files):
-                files.forEach { file in
-                    // gain access to the directory
-                    let gotAccess = file.startAccessingSecurityScopedResource()
-                    if !gotAccess { return }
-                    // access the directory URL
-                    // (read templates in the directory, make a bookmark, etc.)
-                    
-                    // release access
-                    file.stopAccessingSecurityScopedResource()
-                }
+            case .success(let url):
+                //let signer = Signer()
+                //Signer.signIPAFile(at: URL)
+                print("success")
+                
             case .failure(let error):
-                // handle error
-                print(error)
+                // Handle error
+                print(error.localizedDescription)
             }
         }
     }
