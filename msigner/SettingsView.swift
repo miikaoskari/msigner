@@ -60,12 +60,13 @@ struct SettingsView: View {
                     }.onTapGesture(perform: {
                         isImporting = true
                     })
+                }
+                Section(header: Text("Signature Password")) {
                     HStack {
-                        Image(systemName: "lock")
-                        SecureField("Signature Password", text: $provisioningConfig.password)
-                            .onChange(of: provisioningConfig.password) { newValue in
-                                provisioningConfig.savePassword(newValue)
-                            }
+                        SecureField("Signature Password", text: $password)
+                        Button("Enter") {
+                            provisioningConfig.savePassword(password)
+                        }
                     }
                 }
                 
