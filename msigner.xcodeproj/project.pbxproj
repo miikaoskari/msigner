@@ -186,13 +186,9 @@
 		2879CF062B82412C00DC737E /* msigner */ = {
 			isa = PBXGroup;
 			children = (
+				28AD2F692B9B02D50020D03D /* Views */,
 				2879CF072B82412C00DC737E /* msignerApp.swift */,
-				28DAB9092B99C07600222ADB /* AppsView.swift */,
-				2879CF092B82412C00DC737E /* ContentView.swift */,
-				28DAB90B2B99C1A700222ADB /* RepositoriesView.swift */,
 				287985022B826A2E00D6071A /* AppSigner.swift */,
-				287984FA2B825EF400D6071A /* DetailView.swift */,
-				287984FC2B8260F500D6071A /* SettingsView.swift */,
 				2879CF0B2B82412C00DC737E /* Item.swift */,
 				2879CF0D2B82412D00DC737E /* Assets.xcassets */,
 				2879CF0F2B82412D00DC737E /* Preview Content */,
@@ -223,6 +219,18 @@
 				2879CF262B82412D00DC737E /* msignerUITestsLaunchTests.swift */,
 			);
 			path = msignerUITests;
+			sourceTree = "<group>";
+		};
+		28AD2F692B9B02D50020D03D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28DAB9092B99C07600222ADB /* AppsView.swift */,
+				2879CF092B82412C00DC737E /* ContentView.swift */,
+				28DAB90B2B99C1A700222ADB /* RepositoriesView.swift */,
+				287984FA2B825EF400D6071A /* DetailView.swift */,
+				287984FC2B8260F500D6071A /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

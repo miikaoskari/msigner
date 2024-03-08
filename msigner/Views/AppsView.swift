@@ -11,9 +11,13 @@ struct AppsView: View {
     @State private var text = ""
     @State private var error: Error?
     @State private var isImporting = false
+    @State private var isSigning = false
     
     var body: some View {
         NavigationStack {
+            if isSigning {
+                ProgressView()
+            }
             List {
                 NavigationLink("Go to A", value: "App A")
                 NavigationLink("Go to B", value: "App B")
@@ -41,10 +45,12 @@ struct AppsView: View {
         ) { result in
             switch result {
             case .success(let url):
-                //let signer = Signer()
-                //Signer.signIPAFile(at: URL)
-                print("success")
                 
+                
+                
+                isSigning = true
+
+                print("success")
             case .failure(let error):
                 // Handle error
                 print(error.localizedDescription)
