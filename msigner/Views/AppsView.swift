@@ -45,13 +45,19 @@ struct AppsView: View {
             allowsMultipleSelection: false
         ) { result in
             switch result {
-            case .success(let url):
-                print(url)
-                
-                // set progressView as visible
-                isSigning = true
-
-                print("success")
+            case .success(let urls):
+                if let url = urls.first {
+                    print(url)
+                    
+                    // set progressView as visible
+                    isSigning = true
+                    
+                    // unzip ipa
+                    let signer = Signer()
+                    signer.unZipIPA(ipaPath: url, destinationPath: .temporaryDirectory)
+                    
+                    print("success")
+                }
             case .failure(let error):
                 // Handle error
                 print(error.localizedDescription)

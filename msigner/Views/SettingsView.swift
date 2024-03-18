@@ -74,7 +74,7 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .fileImporter(
                 isPresented: $isImporting,
-                allowedContentTypes: [.zip],
+                allowedContentTypes: [.p12, .mobileprovision],
                 allowsMultipleSelection: true
             ) { result in
                 switch result {

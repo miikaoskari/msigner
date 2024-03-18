@@ -10,45 +10,29 @@ import UIKit
 import Zip
 
 class Signer {
-    private var unsigIPAPath: URL
-    private var signedIPAPath: URL
-    private let p12Path: String?
-    private let provPath: String?
-    private var documentsFolder: URL
-    
-    init(unsigIPAPath: URL, p12Path: String, provPath: String, documentsFolder: URL, signedIPAPath: URL) {
-        self.unsigIPAPath = unsigIPAPath
-        self.p12Path = p12Path
-        self.provPath = provPath
-        self.documentsFolder = documentsFolder
-        self.signedIPAPath = signedIPAPath
-        Zip.addCustomFileExtension("ipa")
-    }
-    
-    func signIPAFile() {
-        
-    }
     
     // unzip ipa
-    func unZipIPA() {
+    func unZipIPA(ipaPath: URL, destinationPath: URL) {
+        Zip.addCustomFileExtension("ipa")
         do {
-            self.unsigIPAPath = Bundle.main.url(forResource: "file", withExtension: "ipa")!
-            let documentsDirectory = FileManager.default.urls(for:.documentDirectory, in: .userDomainMask)[0]
-            try Zip.unzipFile(self.unsigIPAPath, destination: documentsDirectory, overwrite: true, password: "", progress: { (progress) -> () in
+            try Zip.unzipFile(ipaPath, destination: destinationPath, overwrite: true, password: "", progress: { (progress) -> () in
                 print(progress)
-            })
+            }) // Unzip
+
         }
         catch {
-          print("Failed to unzip ipa")
+          print("Something went wrong")
         }
     }
     
     // zip signed ipa
     func zipIPA() {
-       
+        
     }
     
-    
-    
+    // sign ipa file
+    func signIPAFile() {
+        
+    }
     
 }
