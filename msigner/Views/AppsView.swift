@@ -52,10 +52,16 @@ struct AppsView: View {
                     // set progressView as visible
                     isSigning = true
                     
-                    // unzip ipa
+                    
                     let signer = Signer()
+                    // unzip ipa
                     signer.unZipIPA(ipaPath: url, destinationPath: .temporaryDirectory)
                     
+                    // perform signing operations
+                    signer.signIPAFile()
+                    
+                    // zip back to ipa
+                    signer.zipIPA(unzippedIpaPath: .temporaryDirectory, destinationPath: url)
                     print("success")
                 }
             case .failure(let error):

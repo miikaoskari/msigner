@@ -10,28 +10,41 @@ import UIKit
 import Zip
 
 class Signer {
+    // init
+    init() {
+        Zip.addCustomFileExtension("ipa")
+    }
     
     // unzip ipa
     func unZipIPA(ipaPath: URL, destinationPath: URL) {
-        Zip.addCustomFileExtension("ipa")
         do {
             try Zip.unzipFile(ipaPath, destination: destinationPath, overwrite: true, password: "", progress: { (progress) -> () in
                 print(progress)
             }) // Unzip
-
         }
         catch {
-          print("Something went wrong")
+            print("Something went wrong")
         }
     }
     
-    // zip signed ipa
-    func zipIPA() {
-        
+    // zip resigned ipa
+    func zipIPA(unzippedIpaPath: URL, destinationPath: URL, zipFileName: String) {
+        let zipFilePath = destinationPath.appendingPathComponent(zipFileName)
+        do {
+            try Zip.zipFiles(paths: [unzippedIpaPath], zipFilePath: zipFilePath, password: "", progress: { (progress) -> () in
+                print(progress)
+            }) // Zip
+        } catch {
+            print("Something went wrong")
+        }
     }
     
     // sign ipa file
-    func signIPAFile() {
+    func signIPAFile(unzippedIpaPath: URL) {
+        let zsignasset = ZSignAsset()
+        let zappbundle = ZAppBundle()
+        
+        
         
     }
     
