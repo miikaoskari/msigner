@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct AppsView: View {
     @State private var text = ""
@@ -40,14 +41,14 @@ struct AppsView: View {
         }
         .fileImporter(
             isPresented: $isImporting,
-            allowedContentTypes: [.zip],
+            allowedContentTypes: [.ipa],
             allowsMultipleSelection: false
         ) { result in
             switch result {
             case .success(let url):
+                print(url)
                 
-                
-                
+                // set progressView as visible
                 isSigning = true
 
                 print("success")

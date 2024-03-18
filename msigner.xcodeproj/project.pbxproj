@@ -33,6 +33,7 @@
 		2879CF1B2B82412D00DC737E /* msignerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF1A2B82412D00DC737E /* msignerTests.swift */; };
 		2879CF252B82412D00DC737E /* msignerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF242B82412D00DC737E /* msignerUITests.swift */; };
 		2879CF272B82412D00DC737E /* msignerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2879CF262B82412D00DC737E /* msignerUITestsLaunchTests.swift */; };
+		28AD2F6B2B9B066D0020D03D /* UTTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD2F6A2B9B066D0020D03D /* UTTypeExtensions.swift */; };
 		28DAB90A2B99C07600222ADB /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DAB9092B99C07600222ADB /* AppsView.swift */; };
 		28DAB90C2B99C1A700222ADB /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DAB90B2B99C1A700222ADB /* RepositoriesView.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,8 @@
 		2879CF202B82412D00DC737E /* msignerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msignerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2879CF242B82412D00DC737E /* msignerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerUITests.swift; sourceTree = "<group>"; };
 		2879CF262B82412D00DC737E /* msignerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msignerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28AD2F6A2B9B066D0020D03D /* UTTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTTypeExtensions.swift; sourceTree = "<group>"; };
+		28AD2F6C2B9B75470020D03D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		28DAB9092B99C07600222ADB /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
 		28DAB90B2B99C1A700222ADB /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,10 +189,12 @@
 		2879CF062B82412C00DC737E /* msigner */ = {
 			isa = PBXGroup;
 			children = (
+				28AD2F6C2B9B75470020D03D /* Info.plist */,
 				28AD2F692B9B02D50020D03D /* Views */,
 				2879CF072B82412C00DC737E /* msignerApp.swift */,
 				287985022B826A2E00D6071A /* AppSigner.swift */,
 				2879CF0B2B82412C00DC737E /* Item.swift */,
+				28AD2F6A2B9B066D0020D03D /* UTTypeExtensions.swift */,
 				2879CF0D2B82412D00DC737E /* Assets.xcassets */,
 				2879CF0F2B82412D00DC737E /* Preview Content */,
 			);
@@ -391,6 +396,7 @@
 				28DAB90C2B99C1A700222ADB /* RepositoriesView.swift in Sources */,
 				28141C922B95339C004598E8 /* signing.cpp in Sources */,
 				28141C8B2B95339C004598E8 /* base64.cpp in Sources */,
+				28AD2F6B2B9B066D0020D03D /* UTTypeExtensions.swift in Sources */,
 				2879CF082B82412C00DC737E /* msignerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +568,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/;
+				INFOPLIST_FILE = msigner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -602,6 +609,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/;
+				INFOPLIST_FILE = msigner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
