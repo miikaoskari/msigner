@@ -58,10 +58,10 @@ struct AppsView: View {
                     signer.unZipIPA(ipaPath: url, destinationPath: .temporaryDirectory)
                     
                     // perform signing operations
-                    signer.signIPAFile()
+                    signer.signIPAFile(unzippedIpaPath: .temporaryDirectory, dylibPath: URL(string: "")!)
                     
                     // zip back to ipa
-                    signer.zipIPA(unzippedIpaPath: .temporaryDirectory, destinationPath: url)
+                    signer.zipIPA(unzippedIpaPath: .temporaryDirectory, destinationPath: url, zipFileName: generateRandomString(length: 12) + ".ipa")
                     print("success")
                 }
             case .failure(let error):
@@ -70,6 +70,11 @@ struct AppsView: View {
             }
         }
     }
+}
+
+func generateRandomString(length: Int) -> String {
+    let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    return String((0..<length).map { _ in letters.randomElement()! })
 }
 
 

@@ -40,12 +40,24 @@ class Signer {
     }
     
     // sign ipa file
-    func signIPAFile(unzippedIpaPath: URL) {
-        let zsignasset = ZSignAsset()
-        let zappbundle = ZAppBundle()
+    func signIPAFile(unzippedIpaPath: URL, dylibPath: URL) {
+        var zsignasset = ZSignAsset()
+        var zappbundle = ZAppBundle()
         
+        let unzippedIpaPathString = unzippedIpaPath.path
+        let stdUnzippedIpaPath = std.string(unzippedIpaPathString)
         
+        let dylibPathString = dylibPath.path
+        let stdDylibPath = std.string(dylibPathString)
         
+        let bundleId = std.string("1")
+        let bundleVersion = std.string("version")
+        let displayName = std.string("display")
+        let bForce = CBool(false)
+        let bWeakInject = CBool(false)
+        let bEnableCache = CBool(false)
+        
+        zappbundle.SignFolder(&zsignasset, stdUnzippedIpaPath, bundleId, bundleVersion, displayName, stdDylibPath, bForce, bWeakInject, bEnableCache)
     }
     
 }
